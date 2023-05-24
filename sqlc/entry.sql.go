@@ -12,24 +12,24 @@ import (
 const createEntry = `-- name: CreateEntry :one
 INSERT INTO entries (
     amount,
-    acccount_id
+    account_id
     ) VALUES(
         $1, $2
     )
-RETURNING id, acccount_id, amount, created_at
+RETURNING id, account_id, amount, created_at
 `
 
 type CreateEntryParams struct {
-	Amount     int64
-	AcccountID int64
+	Amount    int64
+	AccountID int64
 }
 
 func (q *Queries) CreateEntry(ctx context.Context, arg CreateEntryParams) (Entry, error) {
-	row := q.db.QueryRowContext(ctx, createEntry, arg.Amount, arg.AcccountID)
+	row := q.db.QueryRowContext(ctx, createEntry, arg.Amount, arg.AccountID)
 	var i Entry
 	err := row.Scan(
 		&i.ID,
-		&i.AcccountID,
+		&i.AccountID,
 		&i.Amount,
 		&i.CreatedAt,
 	)
@@ -47,7 +47,7 @@ func (q *Queries) DeleteEntry(ctx context.Context, id int64) error {
 }
 
 const getEntry = `-- name: GetEntry :one
-SELECT id, acccount_id, amount, created_at FROM entries WHERE id= $1
+SELECT id, account_id, amount, created_at FROM entries WHERE id= $1
 `
 
 func (q *Queries) GetEntry(ctx context.Context, id int64) (Entry, error) {
@@ -55,7 +55,7 @@ func (q *Queries) GetEntry(ctx context.Context, id int64) (Entry, error) {
 	var i Entry
 	err := row.Scan(
 		&i.ID,
-		&i.AcccountID,
+		&i.AccountID,
 		&i.Amount,
 		&i.CreatedAt,
 	)
@@ -66,7 +66,7 @@ const updateEntry = `-- name: UpdateEntry :one
 UPDATE entries
   set amount = $2
 WHERE id = $1
-RETURNING id, acccount_id, amount, created_at
+RETURNING id, account_id, amount, created_at
 `
 
 type UpdateEntryParams struct {
@@ -79,7 +79,7 @@ func (q *Queries) UpdateEntry(ctx context.Context, arg UpdateEntryParams) (Entry
 	var i Entry
 	err := row.Scan(
 		&i.ID,
-		&i.AcccountID,
+		&i.AccountID,
 		&i.Amount,
 		&i.CreatedAt,
 	)

@@ -17,16 +17,16 @@ type Account struct {
 }
 
 type Entry struct {
-	ID         int64
-	AcccountID int64
-	Amount     int64
-	CreatedAt  time.Time
+	ID        int64
+	AccountID int64
+	Amount    int64
+	CreatedAt time.Time
 }
 
 type Transfer struct {
-	ID             int64
-	FromAcccountID int64
-	ToAcccountID   int64
-	Amount         int64
-	CreatedAt      time.Time
+	ID            int64
+	FromAccountID int64
+	ToAccountID   int64
+	Amount        int64
+	CreatedAt     time.Time
 }
