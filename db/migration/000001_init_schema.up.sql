@@ -2,7 +2,7 @@ CREATE TABLE "accounts" (
   "id" bigserial PRIMARY KEY,
   "owner" varchar NOT NULL,
   "balance" bigint NOT NULL,
-  "currencry" varchar NOT NULL,
+  "currency" varchar NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
@@ -25,7 +25,7 @@ CREATE INDEX ON "accounts" ("owner");
 
 CREATE INDEX ON "accounts" ("balance");
 
-CREATE INDEX ON "accounts" ("currencry");
+CREATE INDEX ON "accounts" ("currency");
 
 CREATE INDEX ON "entries" ("account_id");
 
