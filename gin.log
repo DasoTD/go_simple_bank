@@ -7,16 +7,14 @@
 [GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
 [GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (4 handlers)
 [GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (4 handlers)
+[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-127.0.0.1 - [Mon, 29 May 2023 03:32:13 BST] "GET /account HTTP/1.1 400 296.682µs "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 03:32:13 | 400 |     563.667µs |       127.0.0.1 | GET      "/account"
-127.0.0.1 - [Mon, 29 May 2023 03:32:17 BST] "GET /account HTTP/1.1 400 97.482µs "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 03:32:17 | 400 |     352.817µs |       127.0.0.1 | GET      "/account"
-127.0.0.1 - [Mon, 29 May 2023 03:32:48 BST] "GET /account?page_id=1&page_size=1 HTTP/1.1 400 981.733µs "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 03:32:48 | 400 |    1.942243ms |       127.0.0.1 | GET      "/account?page_id=1&page_size=1"
-127.0.0.1 - [Mon, 29 May 2023 03:33:09 BST] "GET /account?page_id=1&page_size=5 HTTP/1.1 200 20.882159ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 03:33:09 | 200 |   20.930438ms |       127.0.0.1 | GET      "/account?page_id=1&page_size=5"
-127.0.0.1 - [Mon, 29 May 2023 03:33:29 BST] "GET /account?page_id=1&page_size=5 HTTP/1.1 200 1.877131ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 03:33:29 | 200 |    2.279666ms |       127.0.0.1 | GET      "/account?page_id=1&page_size=5"
+[GIN] 2023/05/29 - 03:48:53 | 500 |    6.599073ms |       127.0.0.1 | DELETE   "/account/4"
+127.0.0.1 - [Mon, 29 May 2023 03:52:21 BST] "GET /account/4 HTTP/1.1 200 20.593343ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 03:52:21 | 200 |   20.726551ms |       127.0.0.1 | GET      "/account/4"
+127.0.0.1 - [Mon, 29 May 2023 03:52:28 BST] "GET /account HTTP/1.1 400 237.32µs "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 03:52:28 | 400 |     359.325µs |       127.0.0.1 | GET      "/account"
+127.0.0.1 - [Mon, 29 May 2023 03:52:37 BST] "GET /account?page_id=1&page_size=5 HTTP/1.1 200 1.838289ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 03:52:37 | 200 |    2.106044ms |       127.0.0.1 | GET      "/account?page_id=1&page_size=5"
