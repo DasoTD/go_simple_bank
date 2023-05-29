@@ -8,6 +8,8 @@ import (
 
 	db "github.com/dasotd/go_simple_bank/db/sqlc"
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/binding"
+	"github.com/go-playground/validator/v10"
 )
 
 type Server struct {
@@ -24,6 +26,12 @@ func NewServer(store db.Store) *Server {
 
 	 
 	router  := gin.Default()
+
+	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
+		v.RegisterValidation("currency", validCurrency)
+	}
+
+
 	router.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
 
 		// your custom format
