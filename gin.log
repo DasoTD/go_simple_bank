@@ -1,0 +1,12 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
+127.0.0.1 - [Mon, 29 May 2023 02:17:32 BST] "POST /accounts HTTP/1.1 200 30.946955ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 02:17:32 | 200 |   31.420283ms |       127.0.0.1 | POST     "/accounts"
