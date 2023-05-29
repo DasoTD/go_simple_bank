@@ -112,7 +112,7 @@ type deleteAccountRequest struct {
 
 func (server *Server) deleteAccount(ctx *gin.Context){
 	var req deleteAccountRequest
-	if err := ctx.ShouldBindUri(req); err != nil {
+	if err := ctx.BindUri(&req); err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
 		return
 	}

@@ -14,7 +14,7 @@ type createEntryRequest struct {
 
 func (server *Server) createEntry (ctx *gin.Context) {
 	var req createEntryRequest
-	if err := ctx.BindJSON(req); err != nil {
+	if err := ctx.BindJSON(&req); err != nil {
 		ctx.JSON(http.StatusBadRequest, errorResponse(err))
 		return
 	}
@@ -31,4 +31,27 @@ func (server *Server) createEntry (ctx *gin.Context) {
 	}
 
 	ctx.JSON(http.StatusCreated, entry)
+}
+
+type getEntryRequest struct {
+	ID int64 `uri:"id" binding:"required,min=1"`
+}
+
+func (server *Server) getEntry(ctx *gin.Context){
+	var req getEntryRequest
+
+	if err := ctx.BindUri(&req); err != nil {
+		ctx.JSON(http.StatusBadRequest, errorResponse(err))
+		return
+	}
+
+	
+	entry, err := server.store.GetEntry(ctx, req.ID)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
+		return
+	}
+
+	ctx.JSON(http.StatusOK, entry)
+	
 }

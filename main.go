@@ -8,7 +8,7 @@ import (
 	"time"
 	_"github.com/lib/pq"
 	"github.com/dasotd/go_simple_bank/api"
-	db "github.com/dasotd/go_simple_bank/sqlc"
+	db "github.com/dasotd/go_simple_bank/db/sqlc"
 	"github.com/gin-gonic/gin"
 )
 
