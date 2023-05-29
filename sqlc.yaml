@@ -23,7 +23,7 @@ sql:
    
     gen:
       go:
-        out: "sqlc"
+        out: "db/sqlc" 
 
 # version: "1"database
 # cloud:
