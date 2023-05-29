@@ -1,0 +1,16 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
+[GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (4 handlers)
+[GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (4 handlers)
+[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (4 handlers)
+[GIN-debug] POST   /entry                    --> github.com/dasotd/go_simple_bank/api.(*Server).createEntry-fm (4 handlers)
+[GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (4 handlers)
+[GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (4 handlers)
+[GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (4 handlers)
+ - [Mon, 29 May 2023 21:24:48 BST] "GET /accounts/335 HTTP/1.1 404 179ns "" "
+[GIN] 2023/05/29 - 21:24:48 | 404 |     123.545µs |                 | GET      "/accounts/335"

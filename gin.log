@@ -12,6 +12,15 @@
 [GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (4 handlers)
 [GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (4 handlers)
 [GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (4 handlers)
+[GIN-debug] POST   /transfer                 --> github.com/dasotd/go_simple_bank/api.(*Server).createTransfer-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
+127.0.0.1 - [Mon, 29 May 2023 23:34:29 BST] "POST /transfer HTTP/1.1 400 23.799713ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 23:34:29 | 400 |   24.038678ms |       127.0.0.1 | POST     "/transfer"
+127.0.0.1 - [Mon, 29 May 2023 23:35:01 BST] "POST /transfer HTTP/1.1 200 33.472674ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 23:35:01 | 200 |   33.648195ms |       127.0.0.1 | POST     "/transfer"
+127.0.0.1 - [Mon, 29 May 2023 23:36:48 BST] "POST /transfer HTTP/1.1 200 20.496067ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 23:36:48 | 200 |   20.601942ms |       127.0.0.1 | POST     "/transfer"
+127.0.0.1 - [Mon, 29 May 2023 23:37:22 BST] "POST /transfer HTTP/1.1 200 15.276902ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/29 - 23:37:22 | 200 |   15.422897ms |       127.0.0.1 | POST     "/transfer"

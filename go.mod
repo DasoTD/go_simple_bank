@@ -3,6 +3,7 @@ module github.com/dasotd/go_simple_bank
 go 1.18
 
 require (
+	github.com/golang/mock v1.6.0
 	github.com/lib/pq v1.10.9
 	github.com/stretchr/testify v1.8.3
 	github.com/techschool/simplebank v0.0.0-20230402121500-bdfe8e7aa022
