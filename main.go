@@ -4,24 +4,25 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	_"net/http"
+	_ "net/http"
 	"time"
-	_"github.com/lib/pq"
+
 	"github.com/dasotd/go_simple_bank/api"
 	db "github.com/dasotd/go_simple_bank/db/sqlc"
+	"github.com/dasotd/go_simple_bank/util"
 	"github.com/gin-gonic/gin"
+	_ "github.com/lib/pq"
 )
 
 
-const (
-	DBDriver ="postgres"
-	DBSource = "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable"
-	serverAddress= "0.0.0.0:8080"
-)
+
 
 
 func main(){
-
+	config, err := util.LoadConfig(".")
+	if err != nil {
+		log.Fatal("can not load config")
+	}
 	router := gin.New()
 
 	router.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
@@ -40,14 +41,14 @@ func main(){
 		)
 	  }))
 
-	con, err := sql.Open(DBDriver, DBSource)
+	con, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {
 		log.Fatal("cannot connect to db:", err)
 	}
 
 	store := db.NewStore(con)
 	server := api.NewServer(store)
-	err = server.Start(serverAddress)
+	err = server.Start(config.ServerAddress)
 	if err != nil {
 		log.Fatal("can not start server", err)
 	}

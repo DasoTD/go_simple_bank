@@ -10,10 +10,8 @@
 [GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (4 handlers)
 [GIN-debug] POST   /entry                    --> github.com/dasotd/go_simple_bank/api.(*Server).createEntry-fm (4 handlers)
 [GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (4 handlers)
+[GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (4 handlers)
+[GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-127.0.0.1 - [Mon, 29 May 2023 12:07:54 BST] "DELETE /account/1 HTTP/1.1 200 44.648431ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 12:07:54 | 200 |   45.180789ms |       127.0.0.1 | DELETE   "/account/1"
-127.0.0.1 - [Mon, 29 May 2023 12:07:59 BST] "GET /account?page_id=1&page_size=10 HTTP/1.1 200 4.484843ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 12:07:59 | 200 |    4.698268ms |       127.0.0.1 | GET      "/account?page_id=1&page_size=10"
