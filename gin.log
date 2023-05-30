@@ -4,6 +4,7 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
+[GIN-debug] POST   /users                    --> github.com/dasotd/go_simple_bank/api.(*Server).createUser-fm (4 handlers)
 [GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
 [GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (4 handlers)
 [GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (4 handlers)
@@ -16,9 +17,5 @@
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-127.0.0.1 - [Mon, 29 May 2023 23:53:20 BST] "POST /transfer HTTP/1.1 200 52.747936ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 23:53:20 | 200 |   52.979536ms |       127.0.0.1 | POST     "/transfer"
-127.0.0.1 - [Mon, 29 May 2023 23:53:27 BST] "POST /transfer HTTP/1.1 400 2.901953ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 23:53:27 | 400 |     3.03195ms |       127.0.0.1 | POST     "/transfer"
-127.0.0.1 - [Mon, 29 May 2023 23:53:38 BST] "POST /transfer HTTP/1.1 200 11.482469ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/29 - 23:53:38 | 200 |   11.542607ms |       127.0.0.1 | POST     "/transfer"
+127.0.0.1 - [Tue, 30 May 2023 13:34:00 BST] "POST /users HTTP/1.1 201 94.563699ms "Thunder Client (https://www.thunderclient.com)" "
+[GIN] 2023/05/30 - 13:34:00 | 201 |   94.682047ms |       127.0.0.1 | POST     "/users"
