@@ -1,3 +1,9 @@
+# github.com/aead/chacha20 v0.0.0-20180709150244-8b13a72661da
+## explicit
+# github.com/aead/chacha20poly1305 v0.0.0-20201124145622-1a5aba2a8b29
+## explicit
+# github.com/aead/poly1305 v0.0.0-20180717145839-3fee0db0b635
+## explicit
 # github.com/bytedance/sonic v1.8.0
 ## explicit; go 1.15
 github.com/bytedance/sonic
@@ -25,6 +31,9 @@ github.com/chenzhuoyu/base64x
 # github.com/davecgh/go-spew v1.1.1
 ## explicit
 github.com/davecgh/go-spew/spew
+# github.com/dgrijalva/jwt-go v3.2.0+incompatible
+## explicit
+github.com/dgrijalva/jwt-go
 # github.com/fsnotify/fsnotify v1.6.0
 ## explicit; go 1.16
 github.com/fsnotify/fsnotify
