@@ -4,18 +4,23 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] POST   /users                    --> github.com/dasotd/go_simple_bank/api.(*Server).createUser-fm (4 handlers)
-[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
-[GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (4 handlers)
-[GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (4 handlers)
-[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (4 handlers)
-[GIN-debug] POST   /entry                    --> github.com/dasotd/go_simple_bank/api.(*Server).createEntry-fm (4 handlers)
-[GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (4 handlers)
-[GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (4 handlers)
-[GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (4 handlers)
-[GIN-debug] POST   /transfer                 --> github.com/dasotd/go_simple_bank/api.(*Server).createTransfer-fm (4 handlers)
+[GIN-debug] POST   /users                    --> github.com/dasotd/go_simple_bank/api.(*Server).createUser-fm (3 handlers)
+[GIN-debug] POST   /users/login              --> github.com/dasotd/go_simple_bank/api.(*Server).loginUser-fm (3 handlers)
+[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (3 handlers)
+[GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (3 handlers)
+[GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (3 handlers)
+[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (3 handlers)
+[GIN-debug] POST   /entry                    --> github.com/dasotd/go_simple_bank/api.(*Server).createEntry-fm (3 handlers)
+[GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (3 handlers)
+[GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (3 handlers)
+[GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (3 handlers)
+[GIN-debug] POST   /transfer                 --> github.com/dasotd/go_simple_bank/api.(*Server).createTransfer-fm (3 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-127.0.0.1 - [Tue, 30 May 2023 13:34:00 BST] "POST /users HTTP/1.1 201 94.563699ms "Thunder Client (https://www.thunderclient.com)" "
-[GIN] 2023/05/30 - 13:34:00 | 201 |   94.682047ms |       127.0.0.1 | POST     "/users"
+[GIN] 2023/05/30 - 20:41:44 | 200 |  100.667377ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:42:52 | 401 |   78.376318ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:43:10 | 400 |     226.241µs |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:43:22 | 401 |   79.195173ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:43:29 | 404 |    3.694542ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:43:39 | 200 |    82.38463ms |       127.0.0.1 | POST     "/users/login"
