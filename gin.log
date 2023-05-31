@@ -18,9 +18,4 @@
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-[GIN] 2023/05/30 - 20:41:44 | 200 |  100.667377ms |       127.0.0.1 | POST     "/users/login"
-[GIN] 2023/05/30 - 20:42:52 | 401 |   78.376318ms |       127.0.0.1 | POST     "/users/login"
-[GIN] 2023/05/30 - 20:43:10 | 400 |     226.241µs |       127.0.0.1 | POST     "/users/login"
-[GIN] 2023/05/30 - 20:43:22 | 401 |   79.195173ms |       127.0.0.1 | POST     "/users/login"
-[GIN] 2023/05/30 - 20:43:29 | 404 |    3.694542ms |       127.0.0.1 | POST     "/users/login"
-[GIN] 2023/05/30 - 20:43:39 | 200 |    82.38463ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/30 - 20:45:02 | 200 |  106.941127ms |       127.0.0.1 | POST     "/users/login"
