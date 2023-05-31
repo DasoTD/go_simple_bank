@@ -6,16 +6,22 @@
 
 [GIN-debug] POST   /users                    --> github.com/dasotd/go_simple_bank/api.(*Server).createUser-fm (3 handlers)
 [GIN-debug] POST   /users/login              --> github.com/dasotd/go_simple_bank/api.(*Server).loginUser-fm (3 handlers)
-[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (3 handlers)
-[GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (3 handlers)
-[GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (3 handlers)
-[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (3 handlers)
+[GIN-debug] POST   /accounts                 --> github.com/dasotd/go_simple_bank/api.(*Server).createAccount-fm (4 handlers)
+[GIN-debug] GET    /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).getAccount-fm (4 handlers)
+[GIN-debug] GET    /account                  --> github.com/dasotd/go_simple_bank/api.(*Server).listAccounts-fm (4 handlers)
+[GIN-debug] DELETE /account/:id              --> github.com/dasotd/go_simple_bank/api.(*Server).deleteAccount-fm (4 handlers)
 [GIN-debug] POST   /entry                    --> github.com/dasotd/go_simple_bank/api.(*Server).createEntry-fm (3 handlers)
 [GIN-debug] GET    /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).getEntry-fm (3 handlers)
 [GIN-debug] GET    /entries                  --> github.com/dasotd/go_simple_bank/api.(*Server).ListEntry-fm (3 handlers)
 [GIN-debug] DELETE /entry/:id                --> github.com/dasotd/go_simple_bank/api.(*Server).deleteEntry-fm (3 handlers)
-[GIN-debug] POST   /transfer                 --> github.com/dasotd/go_simple_bank/api.(*Server).createTransfer-fm (3 handlers)
+[GIN-debug] POST   /transfer                 --> github.com/dasotd/go_simple_bank/api.(*Server).createTransfer-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:8080
-[GIN] 2023/05/30 - 20:45:02 | 200 |  106.941127ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/31 - 09:30:54 | 401 |      87.988µs |       127.0.0.1 | POST     "/accounts"
+[GIN] 2023/05/31 - 09:31:17 | 401 |     103.427µs |       127.0.0.1 | POST     "/accounts"
+[GIN] 2023/05/31 - 09:31:27 | 401 |      68.201µs |       127.0.0.1 | POST     "/accounts"
+[GIN] 2023/05/31 - 09:31:34 | 401 |     146.215µs |       127.0.0.1 | POST     "/accounts"
+[GIN] 2023/05/31 - 09:31:47 | 200 |  107.873719ms |       127.0.0.1 | POST     "/users/login"
+[GIN] 2023/05/31 - 09:31:56 | 401 |     172.091µs |       127.0.0.1 | POST     "/accounts"
+[GIN] 2023/05/31 - 09:32:11 | 200 |   17.831713ms |       127.0.0.1 | POST     "/accounts"
